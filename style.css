@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Prompt", sans-serif;
+}
+
+h1 {
+  font-size: 64px;
+  color: #fff;
+  filter: drop-shadow(0 0 10px #ff257e);
+  animation: bounce 1s infinite;
+  position: absolute;
+  bottom: 10rem;
+}
+
+.wrapper {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,197,230,1) 40%);
+    overflow: hidden;
+}
+
+.images {
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+
+    & img {
+    height: 100%;
+        
+    }
+}
+
+@media screen and (max-width: 844px) {
+    h1 {
+        font-size: 32px;
+    }
+}
